@@ -1,0 +1,78 @@
+---
+
+---
+
+<section id="contact" class="w-full " >
+    
+    <h1 class="mx-auto lg:w-100 border-b-5 border-b-rose-900 text-6xl text-center font-bold m-15 ">Contact me</h1>
+
+    <div class="flex ">
+
+        <div class="w-1/2">
+            <h1 class="font-semibold text-center text-3xl mt-10">Esta web fue construida con </h1>
+
+            <div class="flex items-center justify-center ">
+                <img src="/public/astro-icon-dark.svg" alt="astro" class="w-30 h-30 my-15 mx-5 ">
+                <p class="text-2xl">y</p>
+                <img src="/public/tailwindcss.svg" alt="taildwind" class="w-40 h-40 my-3 mx-5">
+
+            </div>
+        </div>
+
+        <div class="w-1/2 flex items-center justify-center transition-all shadow-2xl hover:-translate-y-2 ease-in-out">
+
+        <form id="form" action="/api/contact" method="POST" class="rounded-xl bg-white/10 backdrop-blur-md p-8 flex flex-col text-sm w-3/4">
+
+            <div class="mb-4 flex flex-col">
+                <label class="mb-2 font-bold" for="nombre">Nombre:</label>
+                <input 
+                type="text" 
+                name="nombre"
+                id="nombre"
+                placeholder="Tu nombre" 
+                class="bg-amber-100 border-2 border-indigo-400 rounded text-black h-10 px-3"
+                required
+                >
+            </div>
+
+            <div class="mb-4 flex flex-col">
+                <label class="mb-2 font-bold" for="correo">Tu Correo:</label>
+                <input 
+                type="email" 
+                name="correo"
+                id="correo"
+                placeholder="Tu correo" 
+                class="bg-amber-100 border-2 border-indigo-400 rounded text-black h-10 px-3"
+                required
+                >
+            </div>
+
+            <div class="mb-4 flex flex-col">
+                <label class="mb-2 font-bold" for="mensaje">Mensaje:</label>
+
+                <textarea  
+                name="mensaje" 
+                id="mensaje"
+                placeholder="Escriba aquí...." 
+                class="h-40 bg-amber-100 border-2 border-indigo-400 rounded text-black px-3 py-2"
+                required
+                ></textarea>
+            </div>
+
+            <button 
+            onclick="alert('Gracias por su mensaje')"
+                type="submit"
+                class="rounded-xl hover:scale-105 transition relative overflow-hidden border-b-4 border-b-rose-900 px-6 py-3 cursor-pointer group"
+            >
+                <span class="relative z-10">Enviar</span>
+                <span class="absolute inset-0 bg-rose-900 opacity-70 translate-y-full group-hover:translate-y-0 transition-transform duration-300"></span>
+            </button>
+
+        </form>
+
+    </div>  
+
+</div>
+
+</section>
+

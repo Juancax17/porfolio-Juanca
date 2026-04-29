@@ -1,0 +1,61 @@
+---
+import Header from "../components/Header.astro"
+import '../styles/global.css'
+
+import Footer from "../components/footer.astro"
+import Estrellas from "../components/estrellas.astro"
+import  '@fontsource-variable/eb-garamond/wght.css';
+---
+
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="viewport" content="width=device-width" />
+		<link rel="icon" type="image/svg+xml" href="/favicon.svg" />
+		<link rel="icon" href="/favicon.ico" />
+		<meta name="generator" content={Astro.generator} />
+		<title>Astro Basics</title>
+	</head>
+	<body>
+
+		<Estrellas></Estrellas>
+
+		
+		<div class="relative" style="z-index: 1;">
+			
+			<Header />
+			
+
+			<slot />
+		</div>
+		
+		
+		
+	</body>
+</html>
+
+<style is:global>
+	:root {
+		color-scheme: ligth dark;
+	}
+	html {
+		font-family: 'EB Garamond Variable', serif;
+
+	}
+	body {
+		background: #000;
+		display: flex;
+		justify-content: center;
+		flex-direction: column;
+	}
+
+	#starfield {
+    position: fixed;
+    top: 0;
+    left: 0;
+    z-index: 0;
+	pointer-events: none;
+  }
+</style>

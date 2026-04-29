@@ -1,0 +1,61 @@
+---
+import { ChevronDown } from "lucide-astro";
+import Matrix from "../components/matrix.astro"
+---
+
+
+<section id="home" class="relative  w-full mx-auto lg:w-250 py-20   ">
+
+
+    <Matrix></Matrix>
+
+
+    <div class="flex items-center  gap-x-6 ">
+        
+        <img class="rounded-full w-95 h-130 "
+        src="/public/f4.jpeg"
+        alt="MiFoto">
+        
+     
+        <div class=" p-3 mr-5">
+            <h1 class="text-6xl font-bold flex-row pb-5">
+                Hola, Soy Juan Carlos 
+            </h1>
+
+            
+
+           <h2 class="text-xl opacity-90 leading-relaxed">
+                <span class="text-yellow-200 font-semibold">
+                    Desarrollador Full Stack enfocado en backend e IoT.
+                </span>
+                <span>
+                    Diseño y desarrollo sistemas escalables con Java, Spring Boot y C#, creando soluciones tecnológicas que automatizan procesos y aporten valor real.
+                </span>
+            </h2>
+
+            <div class="relative flex flex-col items-center mt-5">
+
+                <a href="/public/cvActualizadoJUANCA.docx_2026_04.pdf" download class="w-2/8 h-8 border-3 rounded-lg border-amber-200 text-center mt-5 hover:scale-105 transition">Descarga mi CV</a>
+    
+                <a href="#about" class="w-2/8 h-8  border-3 rounded-lg border-amber-200  text-center mt-5 hover:scale-105 transition">Linkedin</a>
+
+            </div>
+
+        </div>
+    </div> 
+    
+     
+    <div class="flex justify-center pt-10">
+    <a 
+      class="inline-flex justify-center items-center rounded-full animate-pulse  bg-white/15 shadow-lg ring-1 ring-black/5 h-20 w-20 hover:scale-110 transition"
+      href="#about" >
+      
+        <ChevronDown class="w-8 h-8 hover:scale-110" />   
+    </a>
+</div>
+
+    
+</section>
+
+
+
