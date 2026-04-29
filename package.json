@@ -13,6 +13,7 @@
   },
   "dependencies": {
     "@astrojs/node": "^10.0.6",
+    "@astrojs/vercel": "^10.0.6",
     "@fontsource-variable/eb-garamond": "^5.2.7",
     "@tailwindcss/vite": "^4.2.4",
     "astro": "^6.1.9",
