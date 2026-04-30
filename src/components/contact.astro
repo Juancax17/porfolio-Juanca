@@ -9,9 +9,9 @@
             <h1 class="font-semibold text-center text-3xl mt-10">Esta web fue construida con </h1>
 
             <div class="flex items-center justify-center ">
-                <img src="/public/astro-icon-dark.svg" alt="astro" class="w-30 h-30 my-15 mx-5 ">
+                <img src="/astro-icon-dark.svg" alt="astro" class="w-30 h-30 my-15 mx-5 ">
                 <p class="text-2xl">y</p>
-                <img src="/public/tailwindcss.svg" alt="taildwind" class="w-40 h-40 my-3 mx-5">
+                <img src="/tailwindcss.svg" alt="taildwind" class="w-40 h-40 my-3 mx-5">
 
             </div>
 
@@ -20,7 +20,7 @@
             <div class=" mx-auto lg:w-25 text-center">
     
                 <a href="https://github.com/Juancax17" >
-                <img src="/public/github_dark.svg" alt="GitHub" class=" w-20 h-15">
+                <img src="/github_dark.svg" alt="GitHub" class=" w-20 h-15">
                 </a>
                 
             </div>
@@ -28,7 +28,7 @@
 
         <div class="w-1/2 flex items-center justify-center transition-all shadow-2xl hover:-translate-y-2 ease-in-out">
 
-        <form id="form" action="/api/contact" method="POST" class="rounded-xl bg-white/10 backdrop-blur-md p-8 flex flex-col text-sm w-3/4">
+        <form id="form"  class="rounded-xl bg-white/10 backdrop-blur-md p-8 flex flex-col text-sm w-3/4">
 
             <div class="mb-4 flex flex-col">
                 <label class="mb-2 font-bold" for="nombre">Nombre:</label>
@@ -67,7 +67,6 @@
             </div>
 
             <button 
-            onclick="alert('Gracias por su mensaje')"
                 type="submit"
                 class="rounded-xl hover:scale-105 transition relative overflow-hidden border-b-4 border-b-rose-900 px-6 py-3 cursor-pointer group"
             >
@@ -83,3 +82,32 @@
 
 </section>
 
+<script>
+  import emailjs from '@emailjs/browser';
+
+  document.getElementById("form")?.addEventListener("submit", async (e) => {
+    e.preventDefault();
+    const form = e.target as HTMLFormElement;
+    const btn = form.querySelector("button[type='submit']") as HTMLButtonElement;
+
+    btn.disabled = true;
+    btn.innerText = "Enviando...";
+
+    try {
+      await emailjs.sendForm(
+        'service_9418wer',
+        'template_pcekpun',
+        form,
+        '0NsU3tW50MvTcE3oq'
+      );
+
+      alert("¡Mensaje enviado! Me pondré en contacto pronto.");
+      form.reset();
+    } catch (error) {
+      alert("Error al enviar, intenta de nuevo.");
+    } finally {
+      btn.disabled = false;
+      btn.innerText = "Enviar";
+    }
+  });
+</script>
