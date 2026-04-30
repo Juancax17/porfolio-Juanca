@@ -3,28 +3,22 @@ import { ChevronDown } from "lucide-astro";
 import Matrix from "../components/matrix.astro"
 ---
 
-
-<section id="home" class="relative  w-full mx-auto lg:w-250 py-20   ">
-
+<section id="home" class="relative w-full mx-auto lg:max-w-5xl py-20 px-6">
 
     <Matrix></Matrix>
 
-
-    <div class="flex items-center  gap-x-6 ">
+    <div class="flex flex-col items-center gap-6 lg:flex-row lg:items-center">
         
-        <img class="rounded-full w-95 h-130 "
+        <img class="rounded-full w-48 h-48 object-cover lg:w-95 lg:h-130"
         src="/f4.jpeg"
         alt="MiFoto">
-        
      
-        <div class=" p-3 mr-5">
-            <h1 class="text-6xl font-bold flex-row pb-5">
+        <div class="p-3 text-center lg:text-left">
+            <h1 class="text-3xl font-bold pb-5 lg:text-6xl">
                 Hola, Soy Juan Carlos 
             </h1>
 
-            
-
-           <h2 class="text-xl opacity-90 leading-relaxed">
+            <h2 class="text-base opacity-90 leading-relaxed lg:text-xl">
                 <span class="text-yellow-200 font-semibold">
                     Desarrollador Full Stack enfocado en backend e IoT.
                 </span>
@@ -33,30 +27,31 @@ import Matrix from "../components/matrix.astro"
                 </span>
             </h2>
 
-            <div class="relative flex flex-col items-center mt-5">
-
-                <a href="/public/cvActualizadoJUANCA.docx_2026_04.pdf" download class="w-2/8 h-8 border-3 rounded-lg border-amber-200 text-center mt-5 hover:scale-105 transition">Descarga mi CV</a>
+            <div class="flex flex-row justify-center lg:justify-start gap-4 mt-5">
+                <a 
+                    href="/cvActualizadoJUANCA.docx_2026_04.pdf" 
+                    download 
+                    class="px-4 py-2 border-2 rounded-lg border-amber-200 text-center hover:scale-105 transition text-sm"
+                >
+                    Descarga mi CV
+                </a>
     
-                <a href="https://www.linkedin.com/in/juan-carlos-nev-ba2756309" class="w-2/8 h-8  border-3 rounded-lg border-amber-200  text-center mt-5 hover:scale-105 transition">Linkedin</a>
-
-
+                <a 
+                    href="https://www.linkedin.com/in/juan-carlos-nev-ba2756309" 
+                    class="px-4 py-2 border-2 rounded-lg border-amber-200 text-center hover:scale-105 transition text-sm"
+                >
+                    LinkedIn
+                </a>
             </div>
-
         </div>
     </div> 
     
-     
     <div class="flex justify-center pt-10">
-    <a 
-      class="inline-flex justify-center items-center rounded-full animate-pulse  bg-white/15 shadow-lg ring-1 ring-black/5 h-20 w-20 hover:scale-110 transition"
-      href="#about" >
-      
-        <ChevronDown class="w-8 h-8 hover:scale-110" />   
-    </a>
-</div>
-
-    
+        <a 
+            class="inline-flex justify-center items-center rounded-full animate-pulse bg-white/15 shadow-lg ring-1 ring-black/5 h-16 w-16 lg:h-20 lg:w-20 hover:scale-110 transition"
+            href="#about"
+        >
+            <ChevronDown class="w-6 h-6 lg:w-8 lg:h-8" />   
+        </a>
+    </div>
 </section>
-
-
-
